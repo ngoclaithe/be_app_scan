@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 console.log('ENV loaded:', {
   CLOUD_NAME: process.env.CLOUD_NAME ? 'OK' : 'MISSING',
